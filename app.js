@@ -49,12 +49,14 @@ app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
 app.post('/store_success', function(req, res) {
   var stripeToken = req.body.stripeToken;
+  var amount = req.body.amount;
+  var purchased_guides = req.body.purchased_guides;
 
   stripe.charges.create({
-    amount: 80,
+    amount: amount,
     currency: "usd",
     card: stripeToken, // obtained with Stripe.js
-    description: "Charge for test@example.com"
+    description: purchased_guides
   });
 
 });
