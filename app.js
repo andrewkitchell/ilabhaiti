@@ -1,16 +1,19 @@
-
 /**
  * Module dependencies
  */
+
+var stripeApiKey = "pk_WK8kK7pQe0wBeHigrI9yGLEpqGqvs";
+var stripeApiKeyTesting = "9PrrkDKIT6vyetcQBbR1RY93eu9Npu8e";
+
 
 var express = require('express'),
   routes = require('./routes'),
   api = require('./routes/api'),
   http = require('http'),
-  path = require('path');
+  path = require('path'),
+  stripe = require('stripe')(stripeApiKeyTesting);
 
 var app = module.exports = express();
-
 
 /**
  * Configuration
@@ -44,6 +47,17 @@ if (app.get('env') === 'production') {
 // serve index and view partials
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
+app.post('/store_success', function(req, res) {
+  var stripeToken = req.body.stripeToken;
+
+  stripe.charges.create({
+    amount: 80,
+    currency: "usd",
+    card: stripeToken, // obtained with Stripe.js
+    description: "Charge for test@example.com"
+  });
+
+});
 
 // JSON API
 app.get('/api/name', api.name);
