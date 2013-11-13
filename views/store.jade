@@ -2,13 +2,17 @@ extends layout
 
 block body
 
-  div(ng-controller="StoreCtrl")
+  div.main(ng-controller="StoreCtrl")
+    span Choose a language
+    select(ng-model="searchparam")
+      option(ng-repeat="guide in guides", value="{{guide.language}}") {{guide.language}}
+
 
     div We charge $2 for shipping.  Unless you are a student.
     | In that case, please add 'student' to your 'coupon' section
     | of our purchse form, and we'll ship your guide to you free.
 
-    div.guide-box(ng-repeat='guide in guides')
+    div.guide-box(ng-repeat='guide in guides | filter: searchparam')
       p {{guide.language}}
       p {{guide.description}}
       p ${{guide.price}}
