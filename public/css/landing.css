@@ -1,0 +1,33 @@
+/* app css stylesheet */
+
+.title {
+  font-size: 50px;
+}
+
+.hero-container,
+.hero {
+  min-height: 440px;
+}
+
+.hero-container {
+  padding-top: 70px;
+  position: relative;
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.hero-content {
+  margin-left: 10%;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+}
+
+.guide-image {
+  border-radius: 50%;
+}

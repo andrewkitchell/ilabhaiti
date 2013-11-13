@@ -7,21 +7,35 @@ angular.module('myApp', [
   'myApp.filters',
   'myApp.services',
   'myApp.directives',
-  'stripe',
-  'angularPayments'
 ]).
 config(function ($routeProvider, $locationProvider) {
   $routeProvider.
-    when('/view1', {
-      templateUrl: 'partials/partial1',
-      controller: 'MyCtrl1'
+    when('/', {
+      templateUrl: 'partials/landing',
+      controller: 'LandingCtrl'
     }).
-    when('/view2', {
-      templateUrl: 'partials/partial2',
-      controller: 'MyCtrl2'
+    when('/about', {
+      templateUrl: 'partials/about',
+      controller: 'AboutCtrl'
+    }).
+    when('/blog', {
+      templateUrl: 'partials/blog',
+      controller: 'BlogCtrl'
+    }).
+    when('/demo', {
+      templateUrl: 'partials/demo',
+      controller: 'DemoCtrl'
+    }).
+    when('/free', {
+      templateUrl: 'partials/free',
+      controller: 'FreeCtrl'
+    }).
+    when('/store', {
+      templateUrl: 'store',
+      controller: 'StoreCtrl'
     }).
     otherwise({
-      redirectTo: '/view1'
+      redirectTo: '/'
     });
 
   $locationProvider.html5Mode(true);

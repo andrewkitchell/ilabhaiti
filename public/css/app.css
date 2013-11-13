@@ -1,30 +1,88 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+* {
+  font-family: 'Open Sans', 'Open Sans Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s ease;
 }
 
-.menu:before {
-  content: "[";
+a:hover {
+  cursor: pointer;
 }
 
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
+body {
+  margin: 0;
   padding: 0;
 }
+
+.nav-list {
+  background: white;
+  box-shadow: 0px 0px 14px rgba(0,0,0,.2);
+  padding: 20px 6%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 12;
+}
+
+.main {
+  margin-top: 90px;
+}
+
+.logo {
+  background: url('/images/logo_30words.jpg');
+  display: inline-block;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.nav-list ul {
+  display: inline-block;
+  position: absolute;
+  top: 38px;
+}
+
+.nav-list ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 26px;
+}
+
+.nav-list ul li a {
+  color: #333;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.store-link {
+  background-color: #FF0033;
+  background-image: url(images/fallback-gradient.png);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF0033), to(#CC0066));
+  background-image: -webkit-linear-gradient(top, #FF0033, #CC0066);
+  background-image: -moz-linear-gradient(top, #FF0033, #CC0066);
+  background-image: -ms-linear-gradient(top, #FF0033, #CC0066);
+  background-image: -o-linear-gradient(top, #FF0033, #CC0066);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,.2);
+  color: white;
+  font-family: 'Open Sans Condensed';
+  font-size: 26px;
+  font-size: 28px;
+  padding: 44px 38px 60px;
+  position: fixed;
+  right: 10%;
+  top: 0;
+  z-index: 3;
+  transition: padding 0.2s ease;
+}
+
+  .store-link:hover {
+    box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+    color: white;
+    padding-bottom: 80px;
+    text-decoration: none;
+    text-shadow: 0 0 4px rgba(255,255,255,.7);
+  }

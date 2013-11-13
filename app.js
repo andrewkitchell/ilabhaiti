@@ -2,16 +2,17 @@
  * Module dependencies
  */
 
-var stripeApiKey = "pk_WK8kK7pQe0wBeHigrI9yGLEpqGqvs";
-var stripeApiKeyTesting = "9PrrkDKIT6vyetcQBbR1RY93eu9Npu8e";
-
-
 var express = require('express'),
   routes = require('./routes'),
   api = require('./routes/api'),
   http = require('http'),
-  path = require('path'),
-  stripe = require('stripe')(stripeApiKeyTesting);
+  path = require('path')
+
+
+var stripeApiKey = "pk_WK8kK7pQe0wBeHigrI9yGLEpqGqvs";
+var stripeApiKeyTesting = "9PrrkDKIT6vyetcQBbR1RY93eu9Npu8e";
+
+var stripe = require('stripe')(stripeApiKeyTesting);
 
 var app = module.exports = express();
 
@@ -47,22 +48,13 @@ if (app.get('env') === 'production') {
 // serve index and view partials
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
-app.post('/store_success', function(req, res) {
-  var stripeToken = req.body.stripeToken;
-  var amount = req.body.amount;
-  var purchased_guides = req.body.purchased_guides;
+app.get('/store', routes.store);
+app.post('/purchase', routes.purchase);
 
-  stripe.charges.create({
-    amount: amount,
-    currency: "usd",
-    card: stripeToken, // obtained with Stripe.js
-    description: purchased_guides
-  });
-
-});
 
 // JSON API
 app.get('/api/name', api.name);
+app.get('/api/guides', api.guides);
 
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);

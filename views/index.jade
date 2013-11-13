@@ -1,31 +1,13 @@
 extends layout
 
 block body
-  div(ng-controller='AppCtrl')
-    h2 Hello {{name}}
-    ul.menu
-      li
-        a(href='view1') view1
-      li
-        a(href='view2') view2
 
-    div(ng-view)
+  div.main(ng-view)
 
-    div(stripeForm)
-
-    div
-      | Angular seed app: v
-      span(app-version)
-
-  script(src='js/lib/angular/angular.js')
+  script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js')
+  script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js')
   script(src='js/app.js')
   script(src='js/services.js')
   script(src='js/controllers.js')
   script(src='js/filters.js')
   script(src='js/directives.js')
-  script(src='js/angular-payments.js')
-  script(src="http://code.jquery.com/jquery-1.10.1.min.js")
-  script(src='https://js.stripe.com/v1/')
-  script(src="https://checkout.stripe.com/checkout.js")
-  script(src='js/lib/stripe-angular/stripe-angular.js')
-  script(src='js/demo.js')

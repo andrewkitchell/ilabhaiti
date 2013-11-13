@@ -1,0 +1,10 @@
+/* app css stylesheet */
+
+.guide-cover {
+  border-radius:  4px;
+}
+
+.guide-box {
+  display: inline-block;
+  width: 25%;
+}

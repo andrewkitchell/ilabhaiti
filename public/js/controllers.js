@@ -15,30 +15,54 @@ angular.module('myApp.controllers', []).
     error(function (data, status, headers, config) {
       $scope.name = 'Error!';
     });
-
   }).
-  controller('MyCtrl1', function ($scope, $rootScope) {
-    // write Ctrl here
-    $scope.handleStripe = function(status, response){
-        if(response.error) {
-          // there was an error. Fix it.
-        } else {
-          // got stripe token, now charge it or smt
-          token = response.id;
-        }
-      };
-    $scope.saveCustomer = function(status, response) {
-      $rootScope.user.stripeCustomerId = response.id;
-      $rootScope.user.save();
+
+  controller('LandingCtrl', function ($scope) {
+    $scope.name = 'Landing';
+
+    $scope.demoGuide = function() {
+      alert('heyo');
     };
 
-    // $scope.init = function() {
-    //   StripeCheckout.configure();
-    //   Stripe.setPublishableKey('pk_LzkJmgBXMs1mjt0WBrlEzrowncsB9');
-    // };
+  }).
+
+  controller('FreeCtrl', function ($scope) {
+    $scope.name = 'Free';
+
+    $scope.cleanSlate = function() {
+      alert('cleanSlate');
+    };
 
   }).
-  controller('MyCtrl2', function ($scope) {
-    // write Ctrl here
+
+  controller('StoreCtrl', function ($scope, $http) {
+
+    $http({
+      method: 'GET',
+      url: '/api/guides'
+    }).
+    success(function (data, status, headers, config) {
+      $scope.name = data.name;
+      $scope.guides = data.guides;
+    }).
+    error(function (data, status, headers, config) {
+      $scope.name = 'Error!';
+    });
+
+    $scope.addToCart = function() {
+      alert('Add to Cart');
+    };
+  }).
+
+  controller('AboutCtrl', function ($scope) {
+    $scope.name = 'About';
+  }).
+  controller('BlogCtrl', function ($scope) {
+    $scope.name = 'Blog';
+  }).
+  controller('DemoCtrl', function ($scope) {
+    $scope.name = 'Demo';
+  }).
+  controller('StudentCtrl', function ($scope) {
 
   });
