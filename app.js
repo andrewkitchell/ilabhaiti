@@ -6,7 +6,7 @@ var express = require('express'),
   routes = require('./routes'),
   api = require('./routes/api'),
   http = require('http'),
-  path = require('path')
+  path = require('path');
 
 
 var stripeApiKey = "pk_WK8kK7pQe0wBeHigrI9yGLEpqGqvs";
@@ -48,7 +48,7 @@ if (app.get('env') === 'production') {
 // serve index and view partials
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
-app.get('/store', routes.store);
+// app.get('/store', routes.store);
 app.post('/purchase', routes.purchase);
 
 
