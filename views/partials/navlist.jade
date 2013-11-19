@@ -1,17 +1,13 @@
 nav.nav-list
   a(href='/')
-   img.logo
+   img.logo(src="/images/ilab-logo.png")
 
   ul
     li
-     a(href='demo', ng-class="{active:isActive('/demo')}") Design
+     a(href='/', ng-class="{active:isActive('/home')}") home
     li
-     a(href='about', ng-class="{active:isActive('/about')}") Mission
+     a(href='what-we-do', ng-class="{active:isActive('/what-we-do')}") what we do
     li
-     a(href='http://162.243.150.16/', ng-class="{active:isActive('/blog')}") Blog
+     a(href='who-we-are', ng-class="{active:isActive('/who-we-are')}") who we are
     li
-     a(href='free', ng-class="{active:isActive('/free')}") Earn a Guide
-    li
-     a(href='store', ng-class="{active:isActive('/store')}", ng-click="reloadCtrl()") Store
-
-  a.store-link(href='store', ng-click="reloadCtrl()") Store
+     a(data-toggle="modal", data-target="#myModal") donate
