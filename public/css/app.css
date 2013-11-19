@@ -4,8 +4,14 @@
   font-family: 'Open Sans', 'Open Sans Condensed', sans-serif;
   margin: 0;
   padding: 0;
-  transition: 0.5s ease;
+  transition: 0.2s ease;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+img {
+  border: none;
 }
 
 a:hover {
@@ -18,31 +24,25 @@ body {
 }
 
 .nav-list {
-  background: white;
-  box-shadow: 0px 0px 14px rgba(0,0,0,.2);
-  padding: 20px 6%;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 14px rgba(0,0,0,.2);
+  left: 0;
+  padding: 10px 6%;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 12;
 }
 
-.main {
-  margin-top: 90px;
-}
-
 .logo {
-  background: url('/images/logo_30words.jpg');
-  display: inline-block;
   margin-right: 10px;
-  width: 50px;
-  height: 50px;
 }
 
 .nav-list ul {
   display: inline-block;
   position: absolute;
-  top: 38px;
+  right: 6%;
+  top: 26px;
 }
 
 .nav-list ul li {
@@ -52,38 +52,120 @@ body {
 }
 
 .nav-list ul li a {
-  color: #333;
+  color: #777;
   font-family: 'Open Sans';
   font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 2px;
   text-transform: uppercase;
+  margin-right: 11px;
 }
 
-.store-link {
-  background-color: #FF0033;
-  background-image: url(images/fallback-gradient.png);
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF0033), to(#CC0066));
-  background-image: -webkit-linear-gradient(top, #FF0033, #CC0066);
-  background-image: -moz-linear-gradient(top, #FF0033, #CC0066);
-  background-image: -ms-linear-gradient(top, #FF0033, #CC0066);
-  background-image: -o-linear-gradient(top, #FF0033, #CC0066);
-  border-radius: 0 0 10px 10px;
-  box-shadow: 1px 1px 10px rgba(0,0,0,.2);
-  color: white;
-  font-family: 'Open Sans Condensed';
-  font-size: 26px;
-  font-size: 28px;
-  padding: 44px 38px 60px;
+.nav-list ul li a:hover {
+  border-bottom: 1px solid #BF2E21;
+  color: #BF2E21;
+  text-decoration: none;
+}
+
+.active {
+  border-bottom: 1px solid #999;
+}
+
+#myModal {
+}
+
+.carousel-control .icon-prev,
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  position: absolute;
+  top: 45%;
+}
+
+.modal-dialog {
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+  background: rgba(255,255,255,1);
+  margin-top: 12%;
+}
+
+.bottom-bar {
   position: fixed;
-  right: 10%;
-  top: 0;
-  z-index: 3;
-  transition: padding 0.2s ease;
+  bottom: 0;
+  padding: 1px 6%;
+  width: 100%;
 }
 
-  .store-link:hover {
-    box-shadow: 1px 1px 10px rgba(0,0,0,.3);
-    color: white;
-    padding-bottom: 80px;
-    text-decoration: none;
-    text-shadow: 0 0 4px rgba(255,255,255,.7);
-  }
+.bottom-bar ul {
+
+}
+
+.bottom-bar li {
+  display: inline-block;
+  list-style: none;
+}
+
+.bottom-bar li a {
+  color: black;
+  margin-right: 20px;
+  text-transform: uppercase;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.75);
+}
+
+.modal-header {
+  font-size: 42px;
+}
+
+.modal-header {
+  color: #428bca;
+}
+
+.modal-body {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.modal-body span {
+  color: #428bca;
+}
+
+.donate-button {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/*  WHAT  */
+
+
+.what-main {
+  margin-top: 56px;
+}
+
+/*  WHO  */
+
+
+.col-md-4 {
+  padding: 4px;
+}
+
+.what-image-box {
+  height: 320px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.what-image-box img,
+.who-image-box img {
+  width: 100%;
+}
+
+
+.whoImageBox img {
+  width: 100%;
+}
+
+.what-image-box img {
+  margin-top: -156px;
+}

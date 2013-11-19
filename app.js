@@ -6,13 +6,8 @@ var express = require('express'),
   routes = require('./routes'),
   api = require('./routes/api'),
   http = require('http'),
-  path = require('path')
+  path = require('path');
 
-
-var stripeApiKey = "pk_WK8kK7pQe0wBeHigrI9yGLEpqGqvs";
-var stripeApiKeyTesting = "9PrrkDKIT6vyetcQBbR1RY93eu9Npu8e";
-
-var stripe = require('stripe')(stripeApiKeyTesting);
 
 var app = module.exports = express();
 
@@ -40,21 +35,10 @@ if (app.get('env') === 'production') {
   // TODO
 };
 
-
-/**
- * Routes
- */
-
 // serve index and view partials
 app.get('/', routes.index);
 app.get('/partials/:name', routes.partials);
-// app.get('/store', routes.store);
-app.post('/purchase', routes.purchase);
 
-
-// JSON API
-app.get('/api/name', api.name);
-app.get('/api/guides', api.guides);
 
 // redirect all others to the index (HTML5 history)
 app.get('*', routes.index);

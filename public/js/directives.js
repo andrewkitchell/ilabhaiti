@@ -1,29 +1,16 @@
-'use strict';
+angular.module('ilabApp.directives', []).
 
-/* Directives */
-
-angular.module('myApp.directives', []).
-  directive('appVersion', function (version) {
-    return function(scope, elm, attrs) {
-      elm.text(version);
+  directive('dirTest', function () {
+    return {
+      restrict: 'E',
+      template: '<div>I\'m a directive</div>'
     };
   }).
+
   directive('navlist', function () {
     return {
       restrict: 'E',
       templateUrl: '/partials/navlist.jade'
     };
-  }).
-  directive('demobutton', function () {
-    return {
-      restrict: 'E',
-      templateUrl: "/partials/demo_button.jade"
-    };
-  }).
-  directive('addToCart', function () {
-    return {
-      restrict: 'E',
-      templateUrl: "/partials/add_to_cart.jade"
-    };
-  });
+  })
 
