@@ -6,6 +6,10 @@
     "express": "~3.2.6",
     "jade": "~0.31.2"
   },
+  "engines": {
+  	"node": "0.10.x",
+  	"npm": "1.2.x"
+  }
   "subdomain": "ilab",
   "scripts": {
   	"start": "node start.js"
