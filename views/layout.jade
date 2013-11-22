@@ -16,3 +16,20 @@ html(ng-app="ilabApp")
     navlist(ng-controller="NavCtrl")
 
     block body
+
+
+    footer.bottom-bar
+      div.social-links
+        a(href="www.facebook.com/ilabhaiti")
+          i(class="fa fa-facebook-square")
+        a(href="http://www.flickr.com/people/kidmoborg/")
+          i(class="fa fa-flickr")
+        a(href="https://www.youtube.com/channel/UCbpGrMcn8IcGOF2tKUIXqQg")
+          i(class="fa fa-youtube")
+      div.contact-info
+        a.kid-mob-box(href="www.kibmob.org")
+          | a KIDmob initiative
+          img(src="/images/kidmob-logo.png", width="22px")
+
+        span email:
+          a(href="mailto:ilab.haiti@gmail.com", target="_blank") ilab.haiti@gmail.com
