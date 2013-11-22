@@ -265,7 +265,8 @@ body {
 /*  WHAT  */
 
 .what-big-images {
-  height: 400px;
+  min-height: 400px;
+  vertical-align: top;
   width: 24.25%;
 }
 
@@ -300,11 +301,7 @@ body {
 }
 
 .carousel {
-  height: 100%;
-}
-
-.carousel-inner > .item  {
-  max-height: 500px;
+  height: 72%;
   overflow: hidden;
 }
 

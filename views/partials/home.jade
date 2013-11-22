@@ -1,22 +1,19 @@
+#carousel.landing-carousel.slide.carousel(data-ride="carousel")
+  div.cover-text
+    | Creative problem solving to implement local solutions
 
-#top-box
+  ol.carousel-indicators
+    li.active(data-target="#carousel", data-slide-to="0")
+    li(data-target="#carousel", data-slide-to="1")
+    li(data-target="#carousel", data-slide-to="2")
+    li(data-target="#carousel", data-slide-to="3")
 
-  #carousel.landing-carousel.slide.carousel(data-ride="carousel")
-    div.cover-text
-      | Creative problem solving to implement local solutions
-
-    ol.carousel-indicators
-      li.active(data-target="#carousel", data-slide-to="0")
-      li(data-target="#carousel", data-slide-to="1")
-      li(data-target="#carousel", data-slide-to="2")
-      li(data-target="#carousel", data-slide-to="3")
-
-    .carousel-inner
-      .item.active
-        img(src="images/home/landing-big-1.jpg", alt="...")
-      .item
-        img(src="images/home/landing-big-2.jpg", alt="...")
-      .item
-        img(src="images/home/landing-big-3.jpg", alt="...")
-      .item
-        img(src="images/home/landing-big-4.jpg", alt="...")
+  .carousel-inner
+    .item.active
+      img(src="images/home/landing-big-1.jpg", alt="...")
+    .item
+      img(src="images/home/landing-big-2.jpg", alt="...")
+    .item
+      img(src="images/home/landing-big-3.jpg", alt="...")
+    .item
+      img(src="images/home/landing-big-4.jpg", alt="...")
