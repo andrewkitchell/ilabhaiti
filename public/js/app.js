@@ -1,6 +1,7 @@
 var ilabApp = angular.module('ilabApp', [
   'ilabApp.controllers',
   'ilabApp.directives',
+  'ilabApp.services',
   ]);
 
 ilabApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -13,6 +14,10 @@ ilabApp.config(['$routeProvider', '$locationProvider', function($routeProvider, 
       templateUrl: 'partials/who-we-are',
       controller: 'WhoCtrl'
     }).
+    when('/who-we-are/:person', {
+        templateUrl: 'partials/who-details',
+        controller: 'WhoCtrl'
+      }).
     when('/what-we-do', {
       templateUrl: 'partials/what-we-do',
       controller: 'WhatCtrl'

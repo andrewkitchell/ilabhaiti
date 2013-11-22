@@ -4,27 +4,20 @@ block body
 
   <div class="main" ng-view></div>
 
-  div.bottom-bar
-    //- ul
-    //-   li
-    //-     a(data-toggle="modal", data-target="#myModal") Donate
-    //-   li
-    //-     a.icon-facebook(target="_blank", href="https://www.facebook.com/ilabhaiti", data-utf="E031")
-
-
   #myModal.modal.fade
     .modal-dialog
-      .modal-header Thanks!
+      .modal-header Thank you!
       .modal-body We're going to redirect you to our donations page.
       .modal-body When you get there, please select <span>'KIDmob'</span> from the dropdown list.
       a.btn.btn-primary.donate-button(target="_blank", href="https://donatenow.networkforgood.org/1442843") Donate Now
 
-  script(src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
-  script(src='//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js')
-
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+  script(src='js/bootstrap.min.js')
   script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js')
   script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js')
+  script(src='js/lib/angular/angular-resource.js')
   script(src='js/main.js')
+  script(src='js/services.js')
   script(src='js/filters.js')
   script(src='js/controllers.js')
   script(src='js/directives.js')

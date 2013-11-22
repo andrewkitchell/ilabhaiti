@@ -10,7 +10,9 @@ angular.module('ilabApp.directives', []).
   directive('navlist', function () {
     return {
       restrict: 'E',
-      templateUrl: '/partials/navlist.jade'
+      templateUrl: '/partials/navlist.jade',
+      replace: true,
+      transclude: true
     };
   })
 

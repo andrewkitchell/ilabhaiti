@@ -20,11 +20,15 @@ angular.module('ilabApp.controllers', []).
 
   }).
 
-  controller('WhoCtrl', function($scope) {
+  controller('WhoCtrl', ['$scope', '$routeParams', 'People',
+    function($scope, $routeParams, People) {
+    $scope.person = People.get({person: $routeParams.person}, function(person) {
+      $scope.name = person.name;
+      $scope.bio = person.bio;
+      $scope.image_url = person.image_url;
+    });
 
-    $scope.name = "Who";
-
-  }).
+  }]).
 
   controller('JoinCtrl', function($scope) {
 

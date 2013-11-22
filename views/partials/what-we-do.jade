@@ -1,6 +1,14 @@
 div.what-main
 
   #carousel-what.slide.carousel
+
+    ol.carousel-indicators
+      li.active(data-target="#carousel-what", data-slide-to="0")
+      li(data-target="#carousel-what", data-slide-to="1")
+      li(data-target="#carousel-what", data-slide-to="2")
+      li(data-target="#carousel-what", data-slide-to="3")
+      li(data-target="#carousel-what", data-slide-to="4")
+
     .carousel-inner
 
       .item.active
@@ -19,21 +27,17 @@ div.what-main
               img(src="images/what-we-do/what-we-do-4.jpg", alt="")
 
       .item
-        p SLIDE 1
         img(src="images/what-we-do/opportunity.jpg")
       .item
-        p SLIDE 2
         img(src="images/what-we-do/socialimpact.jpg")
       .item
-        p SLIDE 3
         img(src="images/what-we-do/sustainabilty.jpg")
       .item
-        p SLIDE 4
         img(src="images/what-we-do/technology.jpg")
 
 
-    a.left.carousel-control(href="what-we-do/#carousel-what", data-slide="prev")
-      span.glyphicon.glyphicon-chevron-left
-    a.right.carousel-control(href="what-we-do/#carousel-what", data-slide="next")
-      span.glyphicon.glyphicon-chevron-right
+    //- a.left.carousel-control(href="what-we-do/#carousel-what", data-slide="prev")
+    //-   span.glyphicon.glyphicon-chevron-left
+    //- a.right.carousel-control(href="what-we-do/#carousel-what", data-slide="next")
+    //-   span.glyphicon.glyphicon-chevron-right
 

@@ -1,13 +1,20 @@
-nav.nav-list
-  a(href='/')
-   img.logo(src="/images/ilab-logo.png")
+header.navbar.navbar-fixed-top.bs-docs-nav
+  .container
+    .navbar-header
+      button.navbar-toggle.bs-docs-nav(data-toggle="collapse", data-target=".bs-navbar-collapse")
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a(href='/')
+       img.logo(src="/images/ilab-logo.png")
 
-  ul
-    li
-     a(href='/', ng-class="{active:isActive('/home')}") home
-    li
-     a(href='what-we-do', ng-class="{active:isActive('/what-we-do')}") what we do
-    li
-     a(href='who-we-are', ng-class="{active:isActive('/who-we-are')}") who we are
-    li
-     a(data-toggle="modal", data-target="#myModal") donate
+    nav.collapse.navbar-collapse.bs-navbar-collapse
+      ul.nav.navbar-nav
+        li
+         a(href='/', ng-class="{active:isActive('/')}") home
+        li
+         a(href='what-we-do', ng-class="{active:isActive('/what-we-do')}") what we do
+        li
+         a(href='who-we-are', ng-class="{active:isActive('/who-we-are')}") who we are
+        li
+         a(data-toggle="modal", data-target="#myModal") donate

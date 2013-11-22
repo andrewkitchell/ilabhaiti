@@ -1,18 +1,28 @@
 #top-box
 
   #carousel.slide.carousel(data-ride="carousel")
+    ol.carousel-indicators
+      li.active(data-target="#carousel", data-slide-to="0")
+      li(data-target="#carousel", data-slide-to="1")
+      li(data-target="#carousel", data-slide-to="2")
+      //- li(data-target="#carousel", data-slide-to="3")
+
     .carousel-inner
       .item.active
         img(src="images/home/home.jpg", alt="...")
       .item
         img(src="images/home/home2.jpg", alt="...")
+        div.write-up.home3-writeup
+          | Our group does not propose to know.
       .item
         img(src="images/home/home3.jpg", alt="...")
-      .item
-        img(src="images/home/home4.jpg", alt="...")
+        div.write-up.home3-writeup
+          | Our group does not propose to know.
+      //- .item
+      //-   img(src="images/home/home4.jpg", alt="...")
 
     <!-- Controls -->
-    a.left.carousel-control(href="#carousel", data-slide="prev")
-      span.glyphicon.glyphicon-chevron-left
-    a.right.carousel-control(href="#carousel", data-slide="next")
-      span.glyphicon.glyphicon-chevron-right
+    //- a.left.carousel-control(href="#carousel", data-slide="prev")
+    //-   span.glyphicon.glyphicon-chevron-left
+    //- a.right.carousel-control(href="#carousel", data-slide="next")
+    //-   span.glyphicon.glyphicon-chevron-right
