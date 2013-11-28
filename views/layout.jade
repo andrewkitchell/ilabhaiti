@@ -3,6 +3,7 @@ doctype 5
 html(ng-app="ilabApp")
   head
     meta(charset='utf8')
+    meta(content="/images/favicon.png", itemprop="image")
     base(href='/')
     title iLab // Haiti
     link(rel='stylesheet', href='/css/bootstrap.min.css', rel="stylesheet")
@@ -20,16 +21,16 @@ html(ng-app="ilabApp")
 
     footer.bottom-bar
       div.social-links
-        a(href="www.facebook.com/ilabhaiti")
+        a(href="http://www.facebook.com/ilabhaiti", target="_blank")
           i(class="fa fa-facebook-square")
-        a(href="http://www.flickr.com/people/kidmoborg/")
+        a(href="http://www.flickr.com/people/kidmoborg/", target="_blank")
           i(class="fa fa-flickr")
-        a(href="https://www.youtube.com/channel/UCbpGrMcn8IcGOF2tKUIXqQg")
+        a(href="https://www.youtube.com/channel/UCbpGrMcn8IcGOF2tKUIXqQg", target="_blank")
           i(class="fa fa-youtube")
+        a(data-toggle="modal", data-target="#contactModal")
+          i(class="fa fa-envelope")
       div.contact-info
-        a.kid-mob-box(href="www.kibmob.org")
-          | a KIDmob initiative
-          img(src="/images/kidmob-logo.png", width="22px")
-
-        span email:
-          a(href="mailto:ilab.haiti@gmail.com", target="_blank") ilab.haiti@gmail.com
+        img.ilab-logo-footer(src="/images/ilab-logo.png", width="80px")
+        | is a project of
+        a.kid-mob-box(href="http://kidmob.org", target='_blank')
+          img(src="/images/kidmob-logo.png", width="40px")
