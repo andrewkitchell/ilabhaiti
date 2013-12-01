@@ -152,16 +152,19 @@ body {
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.75);
 }
 
-.social-links {
+.social-links a {
   position: relative;
-  top: 0px;
+  top: 20px;
+}
+
+.social-links a:last-of-type {
+  color: #999;
+  margin-left: 10px;
 }
 
 .social-links a i {
   font-size: 20px;
   margin-left: 6px;
-  position: relative;
-  top: 20px;
   opacity: .4;
 }
 
