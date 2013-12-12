@@ -7,8 +7,8 @@ block body
   #myModal.modal.fade
     .modal-dialog
       .modal-header Thank you!
-      .modal-body We're going to redirect you to our donations page.
-      .modal-body When you get there, please select <span>'KIDmob'</span> from the dropdown list.
+      .modal-body We're going to redirect you to our donation page.
+      .modal-body When you get there, please enter "KIDmob: iLab // Haiti' as the project name.
       a.btn.btn-primary.donate-button(target="_blank", href="https://donatenow.networkforgood.org/1442843") Donate Now
 
   #contactModal.modal.fade
@@ -22,6 +22,7 @@ block body
   script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js')
   script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js')
   script(src='js/lib/angular/angular-resource.js')
+  script(src='js/lib/angular/angular-sanitize.js')
   script(src='js/main.js')
   script(src='js/services.js')
   script(src='js/filters.js')

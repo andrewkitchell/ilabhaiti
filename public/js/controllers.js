@@ -20,8 +20,8 @@ angular.module('ilabApp.controllers', []).
 
   }).
 
-  controller('WhoCtrl', ['$scope', '$routeParams', 'People',
-    function($scope, $routeParams, People) {
+  controller('WhoCtrl', ['$scope', '$routeParams', '$sanitize', 'People',
+    function($scope, $routeParams, $sanitize, People) {
     $scope.person = People.get({person: $routeParams.person}, function(person) {
       $scope.name = person.name;
       $scope.bio = person.bio;

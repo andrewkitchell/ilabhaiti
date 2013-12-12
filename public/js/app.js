@@ -2,6 +2,7 @@ var ilabApp = angular.module('ilabApp', [
   'ilabApp.controllers',
   'ilabApp.directives',
   'ilabApp.services',
+  'ngSanitize'
   ]);
 
 ilabApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
