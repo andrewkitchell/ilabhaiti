@@ -1,5 +1,5 @@
-
-.main
-  p {{ name }}
-  div {{ bio }}
-  img(src="{{ image_url }}")
+.main.main-who-details
+  img.details-photo(src="{{ image_url }}")
+  div.details-on-bio
+    h2.who-name {{ name }}
+    div.who-bio {{ bio }}
